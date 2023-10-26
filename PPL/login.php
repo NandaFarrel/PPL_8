@@ -9,49 +9,51 @@ function test_input($data) {
     return $data;
 }
 
-// Memeriksa apakah user sudah mengklik tombol login
+$valid = $error_nama = $error_password = '';
+
 if (isset($_POST['login'])) {
     $valid = TRUE;
 
-    // Memeriksa validasi nama
     $nama = test_input($_POST['nama']);
     if ($nama == '') {
         $error_nama = 'Username harus diisi';
         $valid = FALSE;
     }
 
-    // Memeriksa validasi password
     $password = test_input($_POST['password']);
     if ($password == '') {
         $error_password = 'Password harus diisi';
         $valid = FALSE;
     }
 
-    // Memeriksa validasi
     if ($valid) {
-        // Assign query
+        $db = new mysqli("nama_host", "nama_user", "password", "nama_database");
+        if ($db->connect_error) {
+            die("Koneksi database gagal: " . $db->connect_error);
+        }
+
         $query = "SELECT * FROM users WHERE nama='".$nama."' AND Password='".md5($password)."' ";
         $result = $db->query($query);
-        if(!$result){
-            die ("Couldn't query the database: <br/>".$db->error);
-        }else{
-            if($result->num_rows>0){
+        if (!$result) {
+            die("Couldn't query the database: <br/>" . $db->error);
+        } else {
+            if ($result->num_rows > 0) {
                 $row = $result->fetch_object();
                 $_SESSION['status'] = "login";
                 $_SESSION['nama'] = $nama;
-                if($row->role == "mahasiswa"){
+                if ($row->role == "mahasiswa") {
                     header('Location:./mahasiswa/dashboardMHS.php');
-                } else if($row->role == "operator"){
+                } else if ($row->role == "operator") {
                     header('Location: ./operator/dashboardOPT.php');
-                } else if($row->role == "departemen"){
+                } else if ($row->role == "departemen") {
                     header('Location:./departemen/dashboardDPT.php');
-                } else{
+                } else {
                     header('Location:./dosen/dashboardDSN.php');
                 }
                 exit;
             }
         }
-    $db->close();
+        $db->close();
     }
 }
 ?>
@@ -61,88 +63,165 @@ if (isset($_POST['login'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-    <link rel="stylesheet" type="text/css" href="css/login.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Login</title>
-    <link rel="shortcut icon" href="https://kulon2.undip.ac.id/pluginfile.php/1/theme_moove/favicon/1660361299/undip.ico" />
+    <style>
+        body {
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .login-box {
+            width: 400px;
+            padding: 20px;
+            background: #fff;
+            border: 4px solid #545F71;
+            border-radius: 16px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .website-name {
+            font-size: 24px;
+            font-weight: 500;
+            color: #545F71;
+            margin-bottom: 20px;
+        }
+
+        .welcome-text {
+            color: #545F71;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .input-label {
+            color: #545F71;
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .input-container {
+            width: 100%;
+            height: 60px;
+            background: #F5F5F5;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .input-label {
+            width: 100px;
+            padding: 10px;
+        }
+
+        .input-container input {
+            width: calc(100% - 120px);
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .password-toggle-button {
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            color: #545F71;
+        }
+
+        .password-toggle-button:hover {
+            text-decoration: underline;
+        }
+
+        .login-button {
+            width: 100%;
+            height: 48px;
+            background: #545F71;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .login-button:hover {
+            background: #344052;
+        }
+
+        .logo {
+            margin-top: 20px;
+            max-width: 100px;
+            height: auto;
+        }
+        </style>
 </head>
-<style>
-    body {
-    background-image: url(./assets/img/logo1.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    }
-
-    .main {
-    font-family: 'Open Sans';
-    }
-
-    /* Kotak login */
-    .login-box {
-    width: 650px;
-    height: 612px;
-    box-sizing: border-box;
-    border-top-left-radius: 100px;
-    border-bottom-left-radius: 100px;
-    margin-top: -25px;
-    margin-left: auto;
-    }
-
-    /* Agar label StudyfyIF dan Undip ditengah */
-    .center-labels{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 150px;
-        font-size: 2vw;
-    }
-    
-    /* form */
-    .form-control {
-        margin: auto;
-        width: 300px;
-        height: 50px;
-    }
-
-    /* tombol login */
-    .btn {
-        margin: auto;
-        width: 300px;
-        height: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-</style>
 <body>
-<br>
-<body class="" style="background-image: url(./assets/img/logo1.jpg);background-repeat: no-repeat; background-size: 800px 700px;">
-<div class="main d-flex flex-column justify-content-center">
-<div class="login-box shadow" style="background-color:white;">
-<div class=" thumbnail p-4" ><img class="rounded mx-auto d-block" style="width: 4cm; height: 4cm;"src="./assets/img/logo.png"/></div>
-<div class="error"><?php if(isset($error_login)) echo $error_login;?></div>
-    <form method="POST" autocomplete="on" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-        <div class="center-labels">
-        <label style="width: auto; height: 0.5cm;"><strong>StudyfyIF</strong></label>
-        <br>
-        <label style="width: auto; height: 1cm;">Universitas Diponegoro</label>
+    <div class="login-box">
+        <div class="welcome-text">Selamat Datang di CHIWA</div>
+        <img src="assets/images/chiwa.png" alt="CHIWA Logo" class="logo">
+        <div class="input-label">Username</div>
+        <div class="input-container">
+            <input type="text" name="nama" id="username" placeholder="Username">
         </div>
-        <div class="form-group">
-            <div class="error"><?php if(isset($error_nama)) echo $error_nama;?></div>
-            <input type="text" class="form-control" placeholder="Username" id="users" name="nama" maxlength="50" value="<?php if(isset($nama)) echo $nama;?>">
+        <div class="input-label">Password</div>
+        <div class="input-container">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <button class="password-toggle-button" onclick="togglePassword()">Show</button>
         </div>
-        <br>
-        <div class="form-group">
-	        <input type="password" class="form-control" placeholder="Password" id="password" name="password" maxlength="50">
-	    <div class="error"><?php if(isset($error_password)) echo $error_password;?></div>
+        <div class="login-button" onclick="submitForm()">Login</div>
     </div>
-        <br>
-        <button type="login" class="btn btn-dark" name="login" value="login">LOGIN</button>;
-    </form>
-    </div>
-</div>
+
+    <script>
+        function togglePassword() {
+            var passwordInput = document.getElementById('password');
+            var passwordToggleButton = document.querySelector('.password-toggle-button');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordToggleButton.textContent = 'Hide';
+            } else {
+                passwordInput.type = 'password';
+                passwordToggleButton.textContent = 'Show';
+            }
+        }
+
+        function submitForm() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Anda dapat menambahkan logika pengiriman formulir Anda di sini
+            <div class="form-group">
+                <div class="error"><?php if(isset($error_nama)) echo $error_nama;?></div>
+                <input type="text" class="form-control" placeholder="Username" id="users" name="nama" maxlength="50" value="<?php if(isset($nama)) echo $nama;?>">
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" id="password" name="password" maxlength="50">
+                <div class="error"><?php if(isset($error_password)) echo $error_password;?></div>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-dark" name="login" value="login">LOGIN</button>
+        }
+    </script>
 </body>
 </html>

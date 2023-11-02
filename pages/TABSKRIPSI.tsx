@@ -2,51 +2,28 @@ import type { NextPage } from "next";
 import { useCallback } from "react";
 import { useRouter } from "next/router";
 
-const TABUSERSMAHASISWA: NextPage = () => {
+const TABSKRIPSI: NextPage = () => {
   const router = useRouter();
 
-  const onButtonContainerClick = useCallback(() => {
-    router.push("/TABUSERSOPERATOR");
-  }, [router]);
-
-  const onButtonContainer2Click = useCallback(() => {
+  const onButtonContainer1Click = useCallback(() => {
     router.push("/PROFILEDEPARTEMEN");
   }, [router]);
 
   const onButtonContainer3Click = useCallback(() => {
-    router.push("/TABSKRIPSI");
-  }, [router]);
-
-  const onButtonContainer4Click = useCallback(() => {
     router.push("/TABPKL");
   }, [router]);
 
-  const onButtonContainer5Click = useCallback(() => {
+  const onButtonContainer4Click = useCallback(() => {
     router.push("/DASHBOARDDEPARTEMEN");
   }, [router]);
 
-  const onButtonContainer7Click = useCallback(() => {
-    router.push("/TABUSERSDOSENWALI");
+  const onButtonContainer5Click = useCallback(() => {
+    router.push("/");
   }, [router]);
 
   return (
-    <div className="relative w-full h-[673px] text-left text-base text-white font-body-small-heavy">
-      <div className="absolute top-[0px] left-[0px] rounded-2xl box-border w-[1059px] h-[669px] overflow-hidden text-center text-lg text-primary border-[4px] border-solid border-primary">
-        <div className="absolute w-full top-[0px] right-[0px] left-[0px] bg-tertiary h-16 overflow-hidden">
-          <img
-            className="absolute top-[24px] left-[24px] w-16 h-4"
-            alt=""
-            src="/group-3.svg"
-          />
-          <div className="absolute w-[calc(100%_+_2px)] right-[-1px] bottom-[-1px] left-[-1px] box-border h-0.5 border-t-[2px] border-solid border-primary" />
-          <div className="absolute top-[14px] left-[calc(50%_-_232.5px)] rounded-3xs bg-white w-[466px] h-9 overflow-hidden">
-            <div className="absolute top-[0px] left-[calc(50%_-_233px)] tracking-[-0.02em] leading-[22px] font-medium flex items-center justify-center w-[466px] h-9">
-              websitename.com
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="absolute top-[0px] left-[0px] rounded-2xl box-border w-[1059px] h-[669px] overflow-hidden text-center text-lg text-primary border-[4px] border-solid border-primary">
+    <div className="relative w-full h-[1388px] text-left text-base text-white font-body-small-heavy">
+      <div className="absolute top-[11px] left-[0px] rounded-2xl box-border w-[1059px] h-[658px] overflow-hidden text-center text-lg text-primary border-[4px] border-solid border-primary">
         <div className="absolute w-full top-[0px] right-[0px] left-[0px] bg-tertiary h-16 overflow-hidden">
           <img
             className="absolute top-[24px] left-[24px] w-16 h-4"
@@ -62,24 +39,6 @@ const TABUSERSMAHASISWA: NextPage = () => {
         </div>
       </div>
       <div className="absolute top-[64px] left-[294px] rounded-smi w-[762px] h-[596px]" />
-      <div
-        className="absolute top-[129px] left-[512px] rounded-md bg-primary w-[104px] h-12 overflow-hidden flex flex-row items-center justify-center py-3 px-4 box-border gap-[10px] cursor-pointer"
-        onClick={onButtonContainerClick}
-      >
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-          Operator
-        </div>
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-      </div>
       <div className="absolute top-[214px] left-[948px] rounded-md bg-primary w-[104px] h-6 overflow-hidden flex flex-row items-center justify-center py-3 px-4 box-border gap-[10px]">
         <img
           className="relative w-6 h-6 overflow-hidden shrink-0"
@@ -110,11 +69,11 @@ const TABUSERSMAHASISWA: NextPage = () => {
         />
       </div>
       <img
-        className="absolute top-[70px] left-[24px] w-[45px] h-[42px] overflow-hidden"
+        className="absolute top-[79px] left-[17px] w-[45px] h-[42px] overflow-hidden"
         alt=""
         src="/image022.svg"
       />
-      <div className="absolute top-[70px] left-[72px] tracking-[-0.02em] leading-[22px] font-medium text-center flex items-center justify-center w-[61px] h-[38px] [-webkit-text-stroke:1px_rgba(0,_0,_0,_0)]">
+      <div className="absolute top-[79px] left-[65px] tracking-[-0.02em] leading-[22px] font-medium text-center flex items-center justify-center w-[61px] h-[38px] [-webkit-text-stroke:1px_rgba(0,_0,_0,_0)]">
         CHIWA
       </div>
       <div className="absolute top-[70px] left-[311px] w-[345px] flex flex-col items-start justify-end gap-[7px] text-sm text-primary">
@@ -134,7 +93,7 @@ const TABUSERSMAHASISWA: NextPage = () => {
       </div>
       <div
         className="absolute top-[125px] left-[0px] rounded-md bg-primary w-[297px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px] cursor-pointer"
-        onClick={onButtonContainer2Click}
+        onClick={onButtonContainer1Click}
       >
         <img
           className="relative w-6 h-6 overflow-hidden shrink-0"
@@ -150,10 +109,7 @@ const TABUSERSMAHASISWA: NextPage = () => {
           src="/pluscircle1.svg"
         />
       </div>
-      <div
-        className="absolute top-[434px] left-[0px] rounded-md bg-primary w-[296px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px] cursor-pointer"
-        onClick={onButtonContainer3Click}
-      >
+      <div className="absolute top-[434px] left-[0px] rounded-md bg-lightslategray w-[296px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
         <img
           className="relative w-6 h-6 overflow-hidden shrink-0"
           alt=""
@@ -170,7 +126,7 @@ const TABUSERSMAHASISWA: NextPage = () => {
       </div>
       <div
         className="absolute top-[360px] left-[1px] rounded-md bg-primary w-[296px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px] cursor-pointer"
-        onClick={onButtonContainer4Click}
+        onClick={onButtonContainer3Click}
       >
         <img
           className="relative w-6 h-6 overflow-hidden shrink-0"
@@ -188,7 +144,7 @@ const TABUSERSMAHASISWA: NextPage = () => {
       </div>
       <div
         className="absolute top-[199px] left-[0px] rounded-md bg-primary w-[297px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px] cursor-pointer"
-        onClick={onButtonContainer5Click}
+        onClick={onButtonContainer4Click}
       >
         <img
           className="relative w-6 h-6 overflow-hidden shrink-0"
@@ -204,7 +160,10 @@ const TABUSERSMAHASISWA: NextPage = () => {
           src="/pluscircle1.svg"
         />
       </div>
-      <div className="absolute top-[273px] left-[0px] rounded-md bg-lightslategray w-[297px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
+      <div
+        className="absolute top-[273px] left-[0px] rounded-md bg-primary w-[297px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px] cursor-pointer"
+        onClick={onButtonContainer5Click}
+      >
         <img
           className="relative w-6 h-6 overflow-hidden shrink-0"
           alt=""
@@ -219,7 +178,7 @@ const TABUSERSMAHASISWA: NextPage = () => {
           src="/pluscircle1.svg"
         />
       </div>
-      <div className="absolute top-[273px] left-[0px] rounded-lg bg-white w-[7px] h-[73px]" />
+      <div className="absolute top-[434px] left-[0px] rounded-lg bg-white w-[7px] h-[73px]" />
       <div className="absolute top-[245px] left-[297px] rounded-xl bg-white w-[758px] h-[421px] overflow-hidden flex flex-row items-start justify-start text-primary">
         <div className="w-[72px] overflow-hidden shrink-0 flex flex-col items-start justify-start">
           <div className="self-stretch bg-white flex flex-row items-start justify-start py-3 px-4 border-b-[1px] border-solid border-secondary">
@@ -294,7 +253,7 @@ const TABUSERSMAHASISWA: NextPage = () => {
         <div className="w-[146px] overflow-hidden shrink-0 flex flex-col items-start justify-start ml-[-17px]">
           <div className="self-stretch bg-white flex flex-row items-start justify-start py-3 px-4 border-b-[1px] border-solid border-secondary">
             <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-              NIM
+              NIP
             </div>
           </div>
           <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
@@ -383,17 +342,27 @@ const TABUSERSMAHASISWA: NextPage = () => {
           </div>
           <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
             <div className="relative tracking-[-0.02em] leading-[22px]">
-              AKTIF
+              BELUM AMBIL
             </div>
           </div>
           <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
             <div className="relative tracking-[-0.02em] leading-[22px]">
-              CUTI
+              SEDANG AMBIL
             </div>
           </div>
           <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
             <div className="relative tracking-[-0.02em] leading-[22px]">
-              MANGKIR
+              SEDANG AMBIL
+            </div>
+          </div>
+          <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
+            <div className="relative tracking-[-0.02em] leading-[22px]">
+              MENUNGGU SIDANG
+            </div>
+          </div>
+          <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
+            <div className="relative tracking-[-0.02em] leading-[22px]">
+              MENUNGGU SIDANG
             </div>
           </div>
           <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
@@ -401,46 +370,18 @@ const TABUSERSMAHASISWA: NextPage = () => {
               LULUS
             </div>
           </div>
-          <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-            <div className="relative tracking-[-0.02em] leading-[22px]">
-              UNDUR DIRI
-            </div>
-          </div>
-          <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-            <div className="relative tracking-[-0.02em] leading-[22px]">
-              MENINGGAL DUNIA
-            </div>
-          </div>
           <div className="self-stretch bg-white flex flex-row items-center justify-start p-4">
             <div className="relative tracking-[-0.02em] leading-[22px]">
-              Nursing Assistant
+              LULUS
             </div>
           </div>
         </div>
       </div>
-      <div
-        className="absolute top-[129px] left-[400px] rounded-md bg-primary w-[125px] h-12 overflow-hidden flex flex-row items-center justify-center py-3 px-4 box-border gap-[10px] cursor-pointer"
-        onClick={onButtonContainer7Click}
-      >
+      <div className="absolute top-[129px] left-[304px] rounded-md bg-lightslategray w-[120px] h-12 overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
         <img
           className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
           alt=""
-          src="/pluscircle.svg"
-        />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-          Dosen Wali
-        </div>
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle.svg"
-        />
-      </div>
-      <div className="absolute top-[129px] left-[304px] rounded-md bg-lightslategray w-[108px] h-12 overflow-hidden flex flex-row items-center justify-center py-3 px-4 box-border gap-[10px]">
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle.svg"
+          src="/pluscircle1.svg"
         />
         <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
           Mahasiswa
@@ -448,15 +389,285 @@ const TABUSERSMAHASISWA: NextPage = () => {
         <img
           className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
           alt=""
-          src="/pluscircle.svg"
+          src="/pluscircle1.svg"
         />
       </div>
       <div className="absolute top-[214px] left-[304px] tracking-[-0.02em] leading-[22px] font-semibold text-primary flex items-center w-[108px] h-[29px]">
         Mahasiswa
       </div>
-      <div className="absolute top-[177px] left-[400px] rounded-lg bg-white w-[84px] h-1.5 [transform:_rotate(180deg)] [transform-origin:0_0]" />
+      <div className="absolute top-[177px] left-[403px] rounded-lg bg-white w-[84px] h-1.5 [transform:_rotate(180deg)] [transform-origin:0_0]" />
+      <div className="absolute top-[710px] left-[0px] rounded-2xl box-border w-[1059px] h-[669px] overflow-hidden text-center text-lg text-primary border-[4px] border-solid border-primary">
+        <div className="absolute w-full top-[0px] right-[0px] left-[0px] bg-tertiary h-16 overflow-hidden">
+          <img
+            className="absolute top-[24px] left-[24px] w-16 h-4"
+            alt=""
+            src="/group-3.svg"
+          />
+          <div className="absolute w-[calc(100%_+_2px)] right-[-1px] bottom-[-1px] left-[-1px] box-border h-0.5 border-t-[2px] border-solid border-primary" />
+          <div className="absolute top-[14px] left-[calc(50%_-_232.5px)] rounded-3xs bg-white w-[466px] h-9 overflow-hidden">
+            <div className="absolute top-[0px] left-[calc(50%_-_233px)] tracking-[-0.02em] leading-[22px] font-medium flex items-center justify-center w-[466px] h-9">
+              websitename.com
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        className="absolute top-[971px] left-[295px] rounded-4xl w-[759px] h-[402px] object-cover"
+        alt=""
+        src="/image-2@2x.png"
+      />
+      <div className="absolute top-[774px] left-[294px] rounded-smi w-[762px] h-[596px]" />
+      <div className="absolute top-[924px] left-[948px] rounded-md bg-primary w-[104px] h-6 overflow-hidden flex flex-row items-center justify-center py-3 px-4 box-border gap-[10px]">
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
+          Filter
+        </div>
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+      </div>
+      <div className="absolute top-[822px] left-[4px] rounded-lg bg-primary w-[293px] h-[554px]" />
+      <div className="absolute top-[774px] left-[1px] rounded-md bg-primary w-[1058px] h-[61px] overflow-hidden flex flex-row items-center justify-center py-3 px-4 box-border gap-[10px]">
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle2.svg"
+        />
+        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold" />
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle2.svg"
+        />
+      </div>
+      <img
+        className="absolute top-[780px] left-[24px] w-[45px] h-[42px] overflow-hidden"
+        alt=""
+        src="/image022.svg"
+      />
+      <div className="absolute top-[780px] left-[72px] tracking-[-0.02em] leading-[22px] font-medium text-center flex items-center justify-center w-[61px] h-[38px] [-webkit-text-stroke:1px_rgba(0,_0,_0,_0)]">
+        CHIWA
+      </div>
+      <div className="absolute top-[780px] left-[311px] w-[345px] flex flex-col items-start justify-end gap-[7px] text-sm text-primary">
+        <div className="relative tracking-[-0.02em] leading-[19px] hidden">
+          Search
+        </div>
+        <div className="self-stretch rounded-md bg-white box-border h-12 flex flex-row items-start justify-start p-3 gap-[12px] text-base border-[1px] border-solid border-primary">
+          <div className="flex-1 relative tracking-[-0.02em] leading-[22px]">
+            Search...
+          </div>
+          <img
+            className="relative w-6 h-6 overflow-hidden shrink-0"
+            alt=""
+            src="/search.svg"
+          />
+        </div>
+      </div>
+      <div className="absolute top-[835px] left-[0px] rounded-md bg-primary w-[297px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
+          Profile
+        </div>
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+      </div>
+      <div className="absolute top-[1144px] left-[0px] rounded-md bg-lightslategray w-[296px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
+          Skripsi
+        </div>
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+      </div>
+      <div className="absolute top-[1070px] left-[1px] rounded-md bg-primary w-[296px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
+          PKL
+        </div>
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+      </div>
+      <div className="absolute top-[909px] left-[0px] rounded-md bg-primary w-[297px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
+          Dashboard
+        </div>
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+      </div>
+      <div className="absolute top-[983px] left-[0px] rounded-md bg-primary w-[297px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
+          Users
+        </div>
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+      </div>
+      <div className="absolute top-[1144px] left-[0px] rounded-lg bg-white w-[7px] h-[73px]" />
+      <div className="absolute top-[839px] left-[304px] rounded-md bg-lightslategray w-[120px] h-12 overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
+          Mahasiswa
+        </div>
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+      </div>
+      <div className="absolute top-[924px] left-[304px] tracking-[-0.02em] leading-[22px] font-semibold text-primary flex items-center w-[108px] h-[29px]">
+        Mahasiswa
+      </div>
+      <div className="absolute top-[887px] left-[408px] rounded-lg bg-white w-[84px] h-1.5 [transform:_rotate(180deg)] [transform-origin:0_0]" />
+      <div className="absolute top-[772px] left-[296px] rounded-smi w-[762px] h-[596px]" />
+      <img
+        className="absolute top-[1034px] left-[819px] w-[260px] h-[257px]"
+        alt=""
+        src="/rectangle-18.svg"
+      />
+      <div className="absolute top-[1155px] left-[855px] rounded-md bg-primary w-[191px] h-12 overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
+          MENUNGGU SIDANG
+        </div>
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+      </div>
+      <div className="absolute top-[1203px] left-[855px] rounded-md bg-primary w-[191px] h-12 overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
+          LULUS
+        </div>
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+      </div>
+      <div className="absolute top-[1062px] left-[856px] rounded-md bg-lightslategray w-[189px] h-12 overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
+          BELUM AMBIL
+        </div>
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+      </div>
+      <div className="absolute top-[1062px] left-[856px] rounded-lg bg-white w-[9px] h-12" />
+      <div className="absolute top-[1110px] left-[856px] rounded-md bg-primary w-[189px] h-12 overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
+          SEDANG AMBIL
+        </div>
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+      </div>
+      <img
+        className="absolute top-[305px] left-[1031px] w-6 h-6 overflow-hidden"
+        alt=""
+        src="/selector.svg"
+      />
+      <img
+        className="absolute top-[359px] left-[1031px] w-6 h-6 overflow-hidden"
+        alt=""
+        src="/selector.svg"
+      />
+      <img
+        className="absolute top-[408px] left-[1031px] w-6 h-6 overflow-hidden"
+        alt=""
+        src="/selector.svg"
+      />
+      <img
+        className="absolute top-[469px] left-[1031px] w-6 h-6 overflow-hidden"
+        alt=""
+        src="/selector.svg"
+      />
+      <img
+        className="absolute top-[521px] left-[1031px] w-6 h-6 overflow-hidden"
+        alt=""
+        src="/selector.svg"
+      />
+      <img
+        className="absolute top-[576px] left-[1032px] w-6 h-6 overflow-hidden"
+        alt=""
+        src="/selector.svg"
+      />
+      <img
+        className="absolute top-[628px] left-[1031px] w-6 h-6 overflow-hidden"
+        alt=""
+        src="/selector.svg"
+      />
     </div>
   );
 };
 
-export default TABUSERSMAHASISWA;
+export default TABSKRIPSI;

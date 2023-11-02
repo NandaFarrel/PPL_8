@@ -10,6 +10,10 @@ module.exports = {
         primary: "#545f71",
         white: "#fff",
         tertiary: "#eef1f4",
+        black: "#000",
+        lightslategray: "#7b8595",
+        gainsboro: "#d9d9d9",
+        secondary: "#9ba5b7",
       },
       spacing: {},
       fontFamily: {
@@ -17,6 +21,8 @@ module.exports = {
       },
       borderRadius: {
         "3xs": "10px",
+        smi: "13px",
+        "4xl": "23px",
       },
     },
     fontSize: {

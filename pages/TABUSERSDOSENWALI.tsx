@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import { useCallback } from "react";
 import { useRouter } from "next/router";
 
-const TABUSERSMAHASISWA: NextPage = () => {
+const TABUSERSDOSENWALI: NextPage = () => {
   const router = useRouter();
 
   const onButtonContainerClick = useCallback(() => {
@@ -14,7 +14,7 @@ const TABUSERSMAHASISWA: NextPage = () => {
   }, [router]);
 
   const onButtonContainer3Click = useCallback(() => {
-    router.push("/TABSKRIPSI");
+    router.push("/TABPKL");
   }, [router]);
 
   const onButtonContainer4Click = useCallback(() => {
@@ -26,26 +26,11 @@ const TABUSERSMAHASISWA: NextPage = () => {
   }, [router]);
 
   const onButtonContainer7Click = useCallback(() => {
-    router.push("/TABUSERSDOSENWALI");
+    router.push("/");
   }, [router]);
 
   return (
     <div className="relative w-full h-[673px] text-left text-base text-white font-body-small-heavy">
-      <div className="absolute top-[0px] left-[0px] rounded-2xl box-border w-[1059px] h-[669px] overflow-hidden text-center text-lg text-primary border-[4px] border-solid border-primary">
-        <div className="absolute w-full top-[0px] right-[0px] left-[0px] bg-tertiary h-16 overflow-hidden">
-          <img
-            className="absolute top-[24px] left-[24px] w-16 h-4"
-            alt=""
-            src="/group-3.svg"
-          />
-          <div className="absolute w-[calc(100%_+_2px)] right-[-1px] bottom-[-1px] left-[-1px] box-border h-0.5 border-t-[2px] border-solid border-primary" />
-          <div className="absolute top-[14px] left-[calc(50%_-_232.5px)] rounded-3xs bg-white w-[466px] h-9 overflow-hidden">
-            <div className="absolute top-[0px] left-[calc(50%_-_233px)] tracking-[-0.02em] leading-[22px] font-medium flex items-center justify-center w-[466px] h-9">
-              websitename.com
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="absolute top-[0px] left-[0px] rounded-2xl box-border w-[1059px] h-[669px] overflow-hidden text-center text-lg text-primary border-[4px] border-solid border-primary">
         <div className="absolute w-full top-[0px] right-[0px] left-[0px] bg-tertiary h-16 overflow-hidden">
           <img
@@ -294,7 +279,7 @@ const TABUSERSMAHASISWA: NextPage = () => {
         <div className="w-[146px] overflow-hidden shrink-0 flex flex-col items-start justify-start ml-[-17px]">
           <div className="self-stretch bg-white flex flex-row items-start justify-start py-3 px-4 border-b-[1px] border-solid border-secondary">
             <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-              NIM
+              NIP
             </div>
           </div>
           <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
@@ -419,28 +404,13 @@ const TABUSERSMAHASISWA: NextPage = () => {
         </div>
       </div>
       <div
-        className="absolute top-[129px] left-[400px] rounded-md bg-primary w-[125px] h-12 overflow-hidden flex flex-row items-center justify-center py-3 px-4 box-border gap-[10px] cursor-pointer"
+        className="absolute top-[129px] left-[304px] rounded-md bg-primary w-[120px] h-12 overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px] cursor-pointer"
         onClick={onButtonContainer7Click}
       >
         <img
           className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
           alt=""
-          src="/pluscircle.svg"
-        />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-          Dosen Wali
-        </div>
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle.svg"
-        />
-      </div>
-      <div className="absolute top-[129px] left-[304px] rounded-md bg-lightslategray w-[108px] h-12 overflow-hidden flex flex-row items-center justify-center py-3 px-4 box-border gap-[10px]">
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle.svg"
+          src="/pluscircle1.svg"
         />
         <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
           Mahasiswa
@@ -448,15 +418,30 @@ const TABUSERSMAHASISWA: NextPage = () => {
         <img
           className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
           alt=""
-          src="/pluscircle.svg"
+          src="/pluscircle1.svg"
         />
       </div>
       <div className="absolute top-[214px] left-[304px] tracking-[-0.02em] leading-[22px] font-semibold text-primary flex items-center w-[108px] h-[29px]">
-        Mahasiswa
+        Dosen Wali
       </div>
-      <div className="absolute top-[177px] left-[400px] rounded-lg bg-white w-[84px] h-1.5 [transform:_rotate(180deg)] [transform-origin:0_0]" />
+      <div className="absolute top-[129px] left-[407px] rounded-md bg-lightslategray w-[118px] h-12 overflow-hidden flex flex-row items-center justify-center py-3 px-4 box-border gap-[10px]">
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
+          Dosen Wali
+        </div>
+        <img
+          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          alt=""
+          src="/pluscircle1.svg"
+        />
+      </div>
+      <div className="absolute top-[177px] left-[505px] rounded-lg bg-white w-[84px] h-1.5 [transform:_rotate(180deg)] [transform-origin:0_0]" />
     </div>
   );
 };
 
-export default TABUSERSMAHASISWA;
+export default TABUSERSDOSENWALI;

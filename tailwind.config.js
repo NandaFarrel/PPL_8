@@ -7,22 +7,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#545f71",
         white: "#fff",
+        primary: "#545f71",
+        lightslategray: "#7b8595",
+        secondary: "#9ba5b7",
         tertiary: "#eef1f4",
         black: "#000",
-        lightslategray: "#7b8595",
         gainsboro: "#d9d9d9",
-        secondary: "#9ba5b7",
       },
       spacing: {},
       fontFamily: {
-        "body-small-heavy": "Inter",
+        "body-heavy": "Inter",
       },
       borderRadius: {
-        "3xs": "10px",
         smi: "13px",
-        "4xl": "23px",
+        "3xs": "10px",
       },
     },
     fontSize: {

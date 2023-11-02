@@ -1,8 +1,22 @@
 import type { NextPage } from "next";
-import { useCallback } from "react";
+import { useState, useCallback } from "react";
+import POPUPPKL from "./POPUPPKL";
+import PortalPopup from "./PortalPopup";
 import { useRouter } from "next/router";
+import WebFrameDETACHAFTERPLACI from "./WebFrameDETACHAFTERPLACI";
+import SizeRegularTypePrimarySt from "./SizeRegularTypePrimarySt";
+import TypeDefault from "./TypeDefault";
+import TypeText from "./TypeText";
+import TableExample from "./TableExample";
 
 const TABPKL: NextPage = () => {
+  const [isPOPUPPKLOpen, setPOPUPPKLOpen] = useState(false);
+  const [isPOPUPPKL1Open, setPOPUPPKL1Open] = useState(false);
+  const [isPOPUPPKL2Open, setPOPUPPKL2Open] = useState(false);
+  const [isPOPUPPKL3Open, setPOPUPPKL3Open] = useState(false);
+  const [isPOPUPPKL4Open, setPOPUPPKL4Open] = useState(false);
+  const [isPOPUPPKL5Open, setPOPUPPKL5Open] = useState(false);
+  const [isPOPUPPKL6Open, setPOPUPPKL6Open] = useState(false);
   const router = useRouter();
 
   const onButtonContainer1Click = useCallback(() => {
@@ -18,679 +32,922 @@ const TABPKL: NextPage = () => {
   }, [router]);
 
   const onButtonContainer5Click = useCallback(() => {
-    router.push("/");
+    router.push("/TABUSERSMAHASISWA");
   }, [router]);
 
+  const openPOPUPPKL = useCallback(() => {
+    setPOPUPPKLOpen(true);
+  }, []);
+
+  const closePOPUPPKL = useCallback(() => {
+    setPOPUPPKLOpen(false);
+  }, []);
+
+  const openPOPUPPKL1 = useCallback(() => {
+    setPOPUPPKL1Open(true);
+  }, []);
+
+  const closePOPUPPKL1 = useCallback(() => {
+    setPOPUPPKL1Open(false);
+  }, []);
+
+  const openPOPUPPKL2 = useCallback(() => {
+    setPOPUPPKL2Open(true);
+  }, []);
+
+  const closePOPUPPKL2 = useCallback(() => {
+    setPOPUPPKL2Open(false);
+  }, []);
+
+  const openPOPUPPKL3 = useCallback(() => {
+    setPOPUPPKL3Open(true);
+  }, []);
+
+  const closePOPUPPKL3 = useCallback(() => {
+    setPOPUPPKL3Open(false);
+  }, []);
+
+  const openPOPUPPKL4 = useCallback(() => {
+    setPOPUPPKL4Open(true);
+  }, []);
+
+  const closePOPUPPKL4 = useCallback(() => {
+    setPOPUPPKL4Open(false);
+  }, []);
+
+  const openPOPUPPKL5 = useCallback(() => {
+    setPOPUPPKL5Open(true);
+  }, []);
+
+  const closePOPUPPKL5 = useCallback(() => {
+    setPOPUPPKL5Open(false);
+  }, []);
+
+  const openPOPUPPKL6 = useCallback(() => {
+    setPOPUPPKL6Open(true);
+  }, []);
+
+  const closePOPUPPKL6 = useCallback(() => {
+    setPOPUPPKL6Open(false);
+  }, []);
+
   return (
-    <div className="w-[1059px] h-[1278px] text-left text-base text-white font-body-small-heavy">
-      <div className="absolute top-[0px] left-[0px] rounded-2xl box-border w-[1059px] h-[669px] overflow-hidden text-center text-lg text-primary border-[4px] border-solid border-primary">
-        <div className="absolute w-full top-[0px] right-[0px] left-[0px] bg-tertiary h-16 overflow-hidden">
-          <img
-            className="absolute top-[24px] left-[24px] w-16 h-4"
-            alt=""
-            src="/group-3.svg"
-          />
-          <div className="absolute w-[calc(100%_+_2px)] right-[-1px] bottom-[-1px] left-[-1px] box-border h-0.5 border-t-[2px] border-solid border-primary" />
-          <div className="absolute top-[14px] left-[calc(50%_-_232.5px)] rounded-3xs bg-white w-[466px] h-9 overflow-hidden">
-            <div className="absolute top-[0px] left-[calc(50%_-_233px)] tracking-[-0.02em] leading-[22px] font-medium flex items-center justify-center w-[466px] h-9">
-              websitename.com
-            </div>
-          </div>
+    <>
+      <div className="w-[1059px] h-[676px] text-left text-base text-primary font-body-heavy">
+        <WebFrameDETACHAFTERPLACI
+          webFrameDETACHAFTERPLACIWidth="1059px"
+          webFrameDETACHAFTERPLACIHeight="669px"
+          webFrameDETACHAFTERPLACIPosition="absolute"
+          webFrameDETACHAFTERPLACITop="0px"
+          webFrameDETACHAFTERPLACILeft="0px"
+          frameDivLeft="calc(50% - 232.5px)"
+        />
+        <WebFrameDETACHAFTERPLACI
+          webFrameDETACHAFTERPLACIWidth="1059px"
+          webFrameDETACHAFTERPLACIHeight="669px"
+          webFrameDETACHAFTERPLACIPosition="absolute"
+          webFrameDETACHAFTERPLACITop="0px"
+          webFrameDETACHAFTERPLACILeft="0px"
+          frameDivLeft="calc(50% - 232.5px)"
+        />
+        <div className="absolute top-[64px] left-[294px] rounded-smi w-[762px] h-[596px]" />
+        <SizeRegularTypePrimarySt
+          iconImageUrl="/pluscircle1.svg"
+          label="Filter"
+          customIconId="/pluscircle1.svg"
+          trailingIcon={false}
+          leadingIcon
+          sizeRegularTypePrimaryStHeight="24px"
+          sizeRegularTypePrimaryStPosition="absolute"
+          sizeRegularTypePrimaryStTop="214px"
+          sizeRegularTypePrimaryStLeft="948px"
+          sizeRegularTypePrimaryStWidth="104px"
+          sizeRegularTypePrimaryStJustifyContent="center"
+          sizeRegularTypePrimaryStCursor="unset"
+          sizeRegularTypePrimaryStBackgroundColor="#545f71"
+        />
+        <div className="absolute top-[112px] left-[4px] rounded-lg bg-primary w-[293px] h-[554px]" />
+        <SizeRegularTypePrimarySt
+          iconImageUrl="/pluscircle2.svg"
+          customIconId="/pluscircle2.svg"
+          trailingIcon={false}
+          leadingIcon={false}
+          sizeRegularTypePrimaryStHeight="61px"
+          sizeRegularTypePrimaryStPosition="absolute"
+          sizeRegularTypePrimaryStTop="64px"
+          sizeRegularTypePrimaryStLeft="1px"
+          sizeRegularTypePrimaryStWidth="1058px"
+          sizeRegularTypePrimaryStJustifyContent="center"
+          sizeRegularTypePrimaryStCursor="unset"
+          sizeRegularTypePrimaryStBackgroundColor="#545f71"
+        />
+        <img
+          className="absolute top-[70px] left-[24px] w-[45px] h-[42px] overflow-hidden"
+          alt=""
+          src="/image022.svg"
+        />
+        <div className="absolute top-[70px] left-[72px] tracking-[-0.02em] leading-[22px] font-medium text-white text-center flex items-center justify-center w-[61px] h-[38px] [-webkit-text-stroke:1px_rgba(0,_0,_0,_0)]">
+          CHIWA
         </div>
-      </div>
-      <img
-        className="absolute top-[969px] left-[297px] rounded-4xl w-[759px] h-[408px] object-cover"
-        alt=""
-        src="/image-1@2x.png"
-      />
-      <div className="absolute top-[0px] left-[0px] rounded-2xl box-border w-[1059px] h-[669px] overflow-hidden text-center text-lg text-primary border-[4px] border-solid border-primary">
-        <div className="absolute w-full top-[0px] right-[0px] left-[0px] bg-tertiary h-16 overflow-hidden">
-          <img
-            className="absolute top-[24px] left-[24px] w-16 h-4"
-            alt=""
-            src="/group-3.svg"
-          />
-          <div className="absolute w-[calc(100%_+_2px)] right-[-1px] bottom-[-1px] left-[-1px] box-border h-0.5 border-t-[2px] border-solid border-primary" />
-          <div className="absolute top-[14px] left-[calc(50%_-_232.5px)] rounded-3xs bg-white w-[466px] h-9 overflow-hidden">
-            <div className="absolute top-[0px] left-[calc(50%_-_233px)] tracking-[-0.02em] leading-[22px] font-medium flex items-center justify-center w-[466px] h-9">
-              websitename.com
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="absolute top-[64px] left-[294px] rounded-smi w-[762px] h-[596px]" />
-      <div className="absolute top-[214px] left-[948px] rounded-md bg-primary w-[104px] h-6 overflow-hidden flex flex-row items-center justify-center py-3 px-4 box-border gap-[10px]">
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0"
-          alt=""
-          src="/pluscircle1.svg"
+        <TypeDefault
+          inputLabel="Search"
+          inputText="Search..."
+          showInputLabel={false}
+          typeDefaultPosition="absolute"
+          typeDefaultTop="70px"
+          typeDefaultLeft="311px"
         />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-          Filter
-        </div>
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
+        <SizeRegularTypePrimarySt
+          iconImageUrl="/pluscircle1.svg"
+          label="Profile"
+          customIconId="/pluscircle1.svg"
+          trailingIcon={false}
+          leadingIcon
+          sizeRegularTypePrimaryStHeight="74px"
+          sizeRegularTypePrimaryStPosition="absolute"
+          sizeRegularTypePrimaryStTop="125px"
+          sizeRegularTypePrimaryStLeft="0px"
+          sizeRegularTypePrimaryStWidth="297px"
+          sizeRegularTypePrimaryStJustifyContent="flex-start"
+          sizeRegularTypePrimaryStCursor="pointer"
+          sizeRegularTypePrimaryStBackgroundColor="#545f71"
+          onButtonContainer1Click={onButtonContainer1Click}
         />
-      </div>
-      <div className="absolute top-[112px] left-[4px] rounded-lg bg-primary w-[293px] h-[554px]" />
-      <div className="absolute top-[64px] left-[1px] rounded-md bg-primary w-[1058px] h-[61px] overflow-hidden flex flex-row items-center justify-center py-3 px-4 box-border gap-[10px]">
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle2.svg"
+        <SizeRegularTypePrimarySt
+          iconImageUrl="/pluscircle1.svg"
+          label="Skripsi"
+          customIconId="/pluscircle1.svg"
+          trailingIcon={false}
+          leadingIcon
+          sizeRegularTypePrimaryStHeight="74px"
+          sizeRegularTypePrimaryStPosition="absolute"
+          sizeRegularTypePrimaryStTop="434px"
+          sizeRegularTypePrimaryStLeft="0px"
+          sizeRegularTypePrimaryStWidth="296px"
+          sizeRegularTypePrimaryStJustifyContent="flex-start"
+          sizeRegularTypePrimaryStCursor="pointer"
+          sizeRegularTypePrimaryStBackgroundColor="#545f71"
+          onButtonContainer1Click={onButtonContainer2Click}
         />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold" />
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle2.svg"
+        <SizeRegularTypePrimarySt
+          iconImageUrl="/pluscircle1.svg"
+          label="PKL"
+          customIconId="/pluscircle1.svg"
+          trailingIcon={false}
+          leadingIcon
+          sizeRegularTypePrimaryStHeight="74px"
+          sizeRegularTypePrimaryStPosition="absolute"
+          sizeRegularTypePrimaryStTop="360px"
+          sizeRegularTypePrimaryStLeft="1px"
+          sizeRegularTypePrimaryStWidth="296px"
+          sizeRegularTypePrimaryStJustifyContent="flex-start"
+          sizeRegularTypePrimaryStCursor="unset"
+          sizeRegularTypePrimaryStBackgroundColor="#7b8595"
         />
-      </div>
-      <img
-        className="absolute top-[70px] left-[24px] w-[45px] h-[42px] overflow-hidden"
-        alt=""
-        src="/image022.svg"
-      />
-      <div className="absolute top-[70px] left-[72px] tracking-[-0.02em] leading-[22px] font-medium text-center flex items-center justify-center w-[61px] h-[38px] [-webkit-text-stroke:1px_rgba(0,_0,_0,_0)]">
-        CHIWA
-      </div>
-      <div className="absolute top-[70px] left-[311px] w-[345px] flex flex-col items-start justify-end gap-[7px] text-sm text-primary">
-        <div className="relative tracking-[-0.02em] leading-[19px] hidden">
-          Search
-        </div>
-        <div className="self-stretch rounded-md bg-white box-border h-12 flex flex-row items-start justify-start p-3 gap-[12px] text-base border-[1px] border-solid border-primary">
-          <div className="flex-1 relative tracking-[-0.02em] leading-[22px]">
-            Search...
-          </div>
-          <img
-            className="relative w-6 h-6 overflow-hidden shrink-0"
-            alt=""
-            src="/search.svg"
-          />
-        </div>
-      </div>
-      <div
-        className="absolute top-[125px] left-[0px] rounded-md bg-primary w-[297px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px] cursor-pointer"
-        onClick={onButtonContainer1Click}
-      >
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0"
-          alt=""
-          src="/pluscircle1.svg"
+        <SizeRegularTypePrimarySt
+          iconImageUrl="/pluscircle1.svg"
+          label="Dashboard"
+          customIconId="/pluscircle1.svg"
+          trailingIcon={false}
+          leadingIcon
+          sizeRegularTypePrimaryStHeight="74px"
+          sizeRegularTypePrimaryStPosition="absolute"
+          sizeRegularTypePrimaryStTop="199px"
+          sizeRegularTypePrimaryStLeft="0px"
+          sizeRegularTypePrimaryStWidth="297px"
+          sizeRegularTypePrimaryStJustifyContent="flex-start"
+          sizeRegularTypePrimaryStCursor="pointer"
+          sizeRegularTypePrimaryStBackgroundColor="#545f71"
+          onButtonContainer1Click={onButtonContainer4Click}
         />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-          Profile
-        </div>
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
+        <SizeRegularTypePrimarySt
+          iconImageUrl="/pluscircle1.svg"
+          label="Users"
+          customIconId="/pluscircle1.svg"
+          trailingIcon={false}
+          leadingIcon
+          sizeRegularTypePrimaryStHeight="74px"
+          sizeRegularTypePrimaryStPosition="absolute"
+          sizeRegularTypePrimaryStTop="273px"
+          sizeRegularTypePrimaryStLeft="0px"
+          sizeRegularTypePrimaryStWidth="297px"
+          sizeRegularTypePrimaryStJustifyContent="flex-start"
+          sizeRegularTypePrimaryStCursor="pointer"
+          sizeRegularTypePrimaryStBackgroundColor="#545f71"
+          onButtonContainer1Click={onButtonContainer5Click}
         />
-      </div>
-      <div
-        className="absolute top-[434px] left-[0px] rounded-md bg-primary w-[296px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px] cursor-pointer"
-        onClick={onButtonContainer2Click}
-      >
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-          Skripsi
-        </div>
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-      </div>
-      <div className="absolute top-[360px] left-[1px] rounded-md bg-lightslategray w-[296px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-          PKL
-        </div>
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-      </div>
-      <div
-        className="absolute top-[199px] left-[0px] rounded-md bg-primary w-[297px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px] cursor-pointer"
-        onClick={onButtonContainer4Click}
-      >
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-          Dashboard
-        </div>
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-      </div>
-      <div
-        className="absolute top-[273px] left-[0px] rounded-md bg-primary w-[297px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px] cursor-pointer"
-        onClick={onButtonContainer5Click}
-      >
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-          Users
-        </div>
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-      </div>
-      <div className="absolute top-[361px] left-[0px] rounded-lg bg-white w-[7px] h-[73px]" />
-      <div className="absolute top-[234px] left-[287px] w-[667px] h-[442px] flex flex-col items-start justify-start p-2.5 box-border text-primary">
-        <div className="rounded-xl bg-white w-[760px] h-[421px] overflow-hidden shrink-0 flex flex-row items-start justify-start">
-          <div className="w-[72px] overflow-hidden shrink-0 flex flex-col items-start justify-start">
-            <div className="self-stretch bg-white flex flex-row items-start justify-start py-3 px-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-                #
-              </div>
+        <div className="absolute top-[361px] left-[0px] rounded-lg bg-white w-[7px] h-[73px]" />
+        <div className="absolute top-[234px] left-[287px] w-[667px] h-[442px] flex flex-col items-start justify-start p-2.5 box-border">
+          <div className="rounded-xl bg-white w-[760px] h-[421px] overflow-hidden shrink-0 flex flex-row items-start justify-start">
+            <div className="w-[72px] overflow-hidden shrink-0 flex flex-col items-start justify-start">
+              <TypeText
+                tableLabel="#"
+                typeTextAlignItems="flex-start"
+                typeTextPadding="12px 16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="600"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="1"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="2"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="3"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="4"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="5"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="6"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="7"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="unset"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
             </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                1
-              </div>
+            <div className="w-[215px] h-[428px] overflow-hidden shrink-0 flex flex-col items-start justify-start ml-[-15px]">
+              <TypeText
+                tableLabel="Name"
+                typeTextAlignItems="flex-start"
+                typeTextPadding="12px 16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="600"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="Darlene Robertson"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
+              <TableExample
+                text="NIM"
+                text1="AKTIF"
+                text2="CUTI"
+                text3="MANGKIR"
+                text4="LULUS"
+                text5="UNDUR DIRI"
+                text6="MENINGGAL DUNIA"
+                text7="Nursing Assistant"
+                tableExamplePosition="unset"
+                tableExampleTop="unset"
+                tableExampleLeft="unset"
+                tableExampleFlexShrink="0"
+              />
+              <TypeText
+                tableLabel="Ronald Richards"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="Jerome Bell"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="Robert Fox"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="Bessie Cooper"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="Kathryn Murphy"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="Courtney Henry"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="unset"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
             </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                2
-              </div>
+            <div className="w-[140px] overflow-hidden shrink-0 flex flex-col items-start justify-start ml-[-15px]">
+              <TypeText
+                tableLabel="NIP"
+                typeTextAlignItems="flex-start"
+                typeTextPadding="12px 16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="600"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="2798"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="4600"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="4846"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="9151"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="6025"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="6065"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
+              <TypeText
+                tableLabel="9261"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="unset"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
+              />
             </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                3
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                4
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                5
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                6
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                7
-              </div>
-            </div>
-          </div>
-          <div className="w-[215px] h-[428px] overflow-hidden shrink-0 flex flex-col items-start justify-start ml-[-15px]">
-            <div className="self-stretch bg-white flex flex-row items-start justify-start py-3 px-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-                Name
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                Darlene Robertson
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                Ronald Richards
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                Jerome Bell
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                Robert Fox
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                Bessie Cooper
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                Kathryn Murphy
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                Courtney Henry
-              </div>
-            </div>
-          </div>
-          <div className="w-[140px] overflow-hidden shrink-0 flex flex-col items-start justify-start ml-[-15px]">
-            <div className="self-stretch bg-white flex flex-row items-start justify-start py-3 px-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-                NIP
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                2798
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                4600
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                4846
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                9151
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                6025
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                6065
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                9261
-              </div>
-            </div>
-          </div>
-          <div className="w-[170px] h-[420px] overflow-hidden shrink-0 flex flex-col items-start justify-start ml-[-15px]">
-            <div className="bg-white box-border w-[179px] flex flex-row items-start justify-start py-3 px-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-                TAHUN MASUK
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                02/07/1971
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                28/03/1968
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                12/08/1994
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                02/01/1980
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                27/11/1987
-              </div>
-            </div>
-            <div className="self-stretch bg-white flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                22/08/1969
-              </div>
-            </div>
-            <div className="bg-white w-[179px] flex flex-row items-center justify-start p-4 box-border">
-              <div className="relative tracking-[-0.02em] leading-[22px]">
-                20/06/1988
-              </div>
-            </div>
-          </div>
-          <div className="relative w-[234px] h-[420px] ml-[-15px]">
-            <div className="absolute top-[0px] left-[0px] w-[233px] h-[420px] overflow-hidden">
-              <div className="absolute top-[0px] left-[0px] bg-white box-border w-[223px] flex flex-row items-start justify-start py-3 px-4 border-b-[1px] border-solid border-secondary">
+            <div className="w-[170px] h-[420px] overflow-hidden shrink-0 flex flex-col items-start justify-start ml-[-15px]">
+              <div className="bg-white box-border w-[179px] flex flex-row items-start justify-start py-3 px-4 border-b-[1px] border-solid border-secondary">
                 <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-                  STATUS
+                  TAHUN MASUK
                 </div>
               </div>
-              <div className="absolute top-[46px] left-[0px] bg-white box-border w-[223px] flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-                <div className="relative tracking-[-0.02em] leading-[22px]">
-                  BELUM AMBIL
-                </div>
-              </div>
-              <div className="absolute top-[100px] left-[0px] bg-white box-border w-[223px] flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-                <div className="relative tracking-[-0.02em] leading-[22px]">
-                  SEDANG AMBIL
-                </div>
-              </div>
-              <div className="absolute top-[154px] left-[0px] bg-white box-border w-[223px] flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-                <div className="relative tracking-[-0.02em] leading-[22px]">
-                  SEDANG AMBIL
-                </div>
-              </div>
-              <div className="absolute top-[208px] left-[0px] bg-white box-border w-[223px] flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-                <div className="relative tracking-[-0.02em] leading-[22px]">
-                  MENUNGGU SEMINAR
-                </div>
-              </div>
-              <div className="absolute top-[262px] left-[0px] bg-white box-border w-[223px] flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-                <div className="relative tracking-[-0.02em] leading-[22px]">
-                  MENUNGGU SEMINAR
-                </div>
-              </div>
-              <div className="absolute top-[316px] left-[0px] bg-white box-border w-[223px] flex flex-row items-center justify-start p-4 border-b-[1px] border-solid border-secondary">
-                <div className="relative tracking-[-0.02em] leading-[22px]">
-                  LULUS
-                </div>
-              </div>
-              <div className="absolute top-[370px] left-[0px] bg-white w-[223px] flex flex-row items-center justify-start p-4 box-border">
-                <div className="relative tracking-[-0.02em] leading-[22px]">
-                  LULUS
-                </div>
-              </div>
-              <img
-                className="absolute top-[60px] left-[199px] w-6 h-6 overflow-hidden"
-                alt=""
-                src="/selector.svg"
+              <TypeText
+                tableLabel="02/07/1971"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
               />
-              <img
-                className="absolute top-[379px] left-[199px] w-6 h-6 overflow-hidden"
-                alt=""
-                src="/selector.svg"
+              <TypeText
+                tableLabel="28/03/1968"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
               />
-              <img
-                className="absolute top-[276px] left-[199px] w-6 h-6 overflow-hidden"
-                alt=""
-                src="/selector.svg"
+              <TypeText
+                tableLabel="12/08/1994"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
               />
-              <img
-                className="absolute top-[331px] left-[199px] w-6 h-6 overflow-hidden"
-                alt=""
-                src="/selector.svg"
+              <TypeText
+                tableLabel="02/01/1980"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
               />
-              <img
-                className="absolute top-[114px] left-[199px] w-6 h-6 overflow-hidden"
-                alt=""
-                src="/selector.svg"
+              <TypeText
+                tableLabel="27/11/1987"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
               />
-              <img
-                className="absolute top-[175px] left-[199px] w-6 h-6 overflow-hidden"
-                alt=""
-                src="/selector.svg"
+              <TypeText
+                tableLabel="22/08/1969"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="1px solid #9ba5b7"
+                typeTextAlignSelf="stretch"
+                typeTextWidth="unset"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
               />
-              <img
-                className="absolute top-[229px] left-[199px] w-6 h-6 overflow-hidden"
-                alt=""
-                src="/selector.svg"
+              <TypeText
+                tableLabel="20/06/1988"
+                typeTextAlignItems="center"
+                typeTextPadding="16px"
+                typeTextBorderBottom="unset"
+                typeTextAlignSelf="unset"
+                typeTextWidth="179px"
+                typeTextPosition="unset"
+                typeTextTop="unset"
+                typeTextLeft="unset"
+                typeTextHeight="unset"
+                textFontWeight="unset"
+                textWebkitTextStroke="unset"
               />
+            </div>
+            <div className="relative w-[234px] h-[420px] ml-[-15px]">
+              <div className="absolute top-[0px] left-[0px] w-[233px] h-[420px] overflow-hidden">
+                <TypeText
+                  tableLabel="STATUS"
+                  typeTextAlignItems="flex-start"
+                  typeTextPadding="12px 16px"
+                  typeTextBorderBottom="1px solid #9ba5b7"
+                  typeTextAlignSelf="unset"
+                  typeTextWidth="223px"
+                  typeTextPosition="absolute"
+                  typeTextTop="0px"
+                  typeTextLeft="0px"
+                  typeTextHeight="unset"
+                  textFontWeight="600"
+                  textWebkitTextStroke="unset"
+                />
+                <TypeText
+                  tableLabel="BELUM AMBIL"
+                  typeTextAlignItems="center"
+                  typeTextPadding="16px"
+                  typeTextBorderBottom="1px solid #9ba5b7"
+                  typeTextAlignSelf="unset"
+                  typeTextWidth="223px"
+                  typeTextPosition="absolute"
+                  typeTextTop="46px"
+                  typeTextLeft="0px"
+                  typeTextHeight="unset"
+                  textFontWeight="unset"
+                  textWebkitTextStroke="unset"
+                />
+                <TypeText
+                  tableLabel="SEDANG AMBIL"
+                  typeTextAlignItems="center"
+                  typeTextPadding="16px"
+                  typeTextBorderBottom="1px solid #9ba5b7"
+                  typeTextAlignSelf="unset"
+                  typeTextWidth="223px"
+                  typeTextPosition="absolute"
+                  typeTextTop="100px"
+                  typeTextLeft="0px"
+                  typeTextHeight="unset"
+                  textFontWeight="unset"
+                  textWebkitTextStroke="unset"
+                />
+                <TypeText
+                  tableLabel="SEDANG AMBIL"
+                  typeTextAlignItems="center"
+                  typeTextPadding="16px"
+                  typeTextBorderBottom="1px solid #9ba5b7"
+                  typeTextAlignSelf="unset"
+                  typeTextWidth="223px"
+                  typeTextPosition="absolute"
+                  typeTextTop="154px"
+                  typeTextLeft="0px"
+                  typeTextHeight="unset"
+                  textFontWeight="unset"
+                  textWebkitTextStroke="unset"
+                />
+                <TypeText
+                  tableLabel="MENUNGGU SEMINAR"
+                  typeTextAlignItems="center"
+                  typeTextPadding="16px"
+                  typeTextBorderBottom="1px solid #9ba5b7"
+                  typeTextAlignSelf="unset"
+                  typeTextWidth="223px"
+                  typeTextPosition="absolute"
+                  typeTextTop="208px"
+                  typeTextLeft="0px"
+                  typeTextHeight="unset"
+                  textFontWeight="unset"
+                  textWebkitTextStroke="unset"
+                />
+                <TypeText
+                  tableLabel="MENUNGGU SEMINAR"
+                  typeTextAlignItems="center"
+                  typeTextPadding="16px"
+                  typeTextBorderBottom="1px solid #9ba5b7"
+                  typeTextAlignSelf="unset"
+                  typeTextWidth="223px"
+                  typeTextPosition="absolute"
+                  typeTextTop="262px"
+                  typeTextLeft="0px"
+                  typeTextHeight="unset"
+                  textFontWeight="unset"
+                  textWebkitTextStroke="unset"
+                />
+                <TypeText
+                  tableLabel="LULUS"
+                  typeTextAlignItems="center"
+                  typeTextPadding="16px"
+                  typeTextBorderBottom="1px solid #9ba5b7"
+                  typeTextAlignSelf="unset"
+                  typeTextWidth="223px"
+                  typeTextPosition="absolute"
+                  typeTextTop="316px"
+                  typeTextLeft="0px"
+                  typeTextHeight="unset"
+                  textFontWeight="unset"
+                  textWebkitTextStroke="unset"
+                />
+                <TypeText
+                  tableLabel="LULUS"
+                  typeTextAlignItems="center"
+                  typeTextPadding="16px"
+                  typeTextBorderBottom="unset"
+                  typeTextAlignSelf="unset"
+                  typeTextWidth="223px"
+                  typeTextPosition="absolute"
+                  typeTextTop="370px"
+                  typeTextLeft="0px"
+                  typeTextHeight="unset"
+                  textFontWeight="unset"
+                  textWebkitTextStroke="unset"
+                />
+                <img
+                  className="absolute top-[60px] left-[199px] w-6 h-6 overflow-hidden cursor-pointer"
+                  alt=""
+                  src="/selector.svg"
+                  onClick={openPOPUPPKL}
+                />
+                <img
+                  className="absolute top-[379px] left-[199px] w-6 h-6 overflow-hidden cursor-pointer"
+                  alt=""
+                  src="/selector.svg"
+                  onClick={openPOPUPPKL1}
+                />
+                <img
+                  className="absolute top-[276px] left-[199px] w-6 h-6 overflow-hidden cursor-pointer"
+                  alt=""
+                  src="/selector.svg"
+                  onClick={openPOPUPPKL2}
+                />
+                <img
+                  className="absolute top-[331px] left-[199px] w-6 h-6 overflow-hidden cursor-pointer"
+                  alt=""
+                  src="/selector.svg"
+                  onClick={openPOPUPPKL3}
+                />
+                <img
+                  className="absolute top-[114px] left-[199px] w-6 h-6 overflow-hidden cursor-pointer"
+                  alt=""
+                  src="/selector.svg"
+                  onClick={openPOPUPPKL4}
+                />
+                <img
+                  className="absolute top-[175px] left-[199px] w-6 h-6 overflow-hidden cursor-pointer"
+                  alt=""
+                  src="/selector.svg"
+                  onClick={openPOPUPPKL5}
+                />
+                <img
+                  className="absolute top-[229px] left-[199px] w-6 h-6 overflow-hidden cursor-pointer"
+                  alt=""
+                  src="/selector.svg"
+                  onClick={openPOPUPPKL6}
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="absolute top-[129px] left-[304px] rounded-md bg-lightslategray w-[120px] h-12 overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
+        <SizeRegularTypePrimarySt
+          iconImageUrl="/pluscircle1.svg"
+          label="Mahasiswa"
+          customIconId="/pluscircle1.svg"
+          trailingIcon={false}
+          leadingIcon={false}
+          sizeRegularTypePrimaryStHeight="48px"
+          sizeRegularTypePrimaryStPosition="absolute"
+          sizeRegularTypePrimaryStTop="129px"
+          sizeRegularTypePrimaryStLeft="304px"
+          sizeRegularTypePrimaryStWidth="120px"
+          sizeRegularTypePrimaryStJustifyContent="flex-start"
+          sizeRegularTypePrimaryStCursor="unset"
+          sizeRegularTypePrimaryStBackgroundColor="#7b8595"
         />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
+        <div className="absolute top-[214px] left-[304px] tracking-[-0.02em] leading-[22px] font-semibold flex items-center w-[108px] h-[29px]">
           Mahasiswa
         </div>
         <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
+          className="absolute top-[172px] left-[319px] rounded-lg w-[84px] h-1.5"
           alt=""
-          src="/pluscircle1.svg"
+          src="/rectangle-13.svg"
         />
       </div>
-      <div className="absolute top-[214px] left-[304px] tracking-[-0.02em] leading-[22px] font-semibold text-primary flex items-center w-[108px] h-[29px]">
-        Mahasiswa
-      </div>
-      <img
-        className="absolute top-[172px] left-[319px] rounded-lg w-[84px] h-1.5"
-        alt=""
-        src="/rectangle-13.svg"
-      />
-      <div className="absolute top-[711px] left-[0px] rounded-2xl box-border w-[1059px] h-[669px] overflow-hidden text-center text-lg text-primary border-[4px] border-solid border-primary">
-        <div className="absolute w-full top-[0px] right-[0px] left-[0px] bg-tertiary h-16 overflow-hidden">
-          <img
-            className="absolute top-[24px] left-[24px] w-16 h-4"
-            alt=""
-            src="/group-3.svg"
-          />
-          <div className="absolute w-[calc(100%_+_2px)] right-[-1px] bottom-[-1px] left-[-1px] box-border h-0.5 border-t-[2px] border-solid border-primary" />
-          <div className="absolute top-[14px] left-[calc(50%_-_232.5px)] rounded-3xs bg-white w-[466px] h-9 overflow-hidden">
-            <div className="absolute top-[0px] left-[calc(50%_-_233px)] tracking-[-0.02em] leading-[22px] font-medium flex items-center justify-center w-[466px] h-9">
-              websitename.com
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="absolute top-[711px] left-[0px] rounded-2xl box-border w-[1059px] h-[669px] overflow-hidden text-center text-lg text-primary border-[4px] border-solid border-primary">
-        <div className="absolute w-full top-[0px] right-[0px] left-[0px] bg-tertiary h-16 overflow-hidden">
-          <img
-            className="absolute top-[24px] left-[24px] w-16 h-4"
-            alt=""
-            src="/group-3.svg"
-          />
-          <div className="absolute w-[calc(100%_+_2px)] right-[-1px] bottom-[-1px] left-[-1px] box-border h-0.5 border-t-[2px] border-solid border-primary" />
-          <div className="absolute top-[14px] left-[calc(50%_-_232.5px)] rounded-3xs bg-white w-[466px] h-9 overflow-hidden">
-            <div className="absolute top-[0px] left-[calc(50%_-_233px)] tracking-[-0.02em] leading-[22px] font-medium flex items-center justify-center w-[466px] h-9">
-              websitename.com
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="absolute top-[775px] left-[294px] rounded-smi w-[762px] h-[596px]" />
-      <div className="absolute top-[925px] left-[948px] rounded-md bg-primary w-[104px] h-6 overflow-hidden flex flex-row items-center justify-center py-3 px-4 box-border gap-[10px]">
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-          Filter
-        </div>
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-      </div>
-      <div className="absolute top-[823px] left-[4px] rounded-lg bg-primary w-[293px] h-[554px]" />
-      <div className="absolute top-[775px] left-[1px] rounded-md bg-primary w-[1058px] h-[61px] overflow-hidden flex flex-row items-center justify-center py-3 px-4 box-border gap-[10px]">
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle2.svg"
-        />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold" />
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle2.svg"
-        />
-      </div>
-      <img
-        className="absolute top-[781px] left-[24px] w-[45px] h-[42px] overflow-hidden"
-        alt=""
-        src="/image022.svg"
-      />
-      <div className="absolute top-[781px] left-[72px] tracking-[-0.02em] leading-[22px] font-medium text-center flex items-center justify-center w-[61px] h-[38px] [-webkit-text-stroke:1px_rgba(0,_0,_0,_0)]">
-        CHIWA
-      </div>
-      <div className="absolute top-[781px] left-[311px] w-[345px] flex flex-col items-start justify-end gap-[7px] text-sm text-primary">
-        <div className="relative tracking-[-0.02em] leading-[19px] hidden">
-          Search
-        </div>
-        <div className="self-stretch rounded-md bg-white box-border h-12 flex flex-row items-start justify-start p-3 gap-[12px] text-base border-[1px] border-solid border-primary">
-          <div className="flex-1 relative tracking-[-0.02em] leading-[22px]">
-            Search...
-          </div>
-          <img
-            className="relative w-6 h-6 overflow-hidden shrink-0"
-            alt=""
-            src="/search.svg"
-          />
-        </div>
-      </div>
-      <div className="absolute top-[836px] left-[0px] rounded-md bg-primary w-[297px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-          Profile
-        </div>
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-      </div>
-      <div className="absolute top-[1145px] left-[0px] rounded-md bg-primary w-[296px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-          Skripsi
-        </div>
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-      </div>
-      <div className="absolute top-[1071px] left-[1px] rounded-md bg-lightslategray w-[296px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-          PKL
-        </div>
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-      </div>
-      <div className="absolute top-[910px] left-[0px] rounded-md bg-primary w-[297px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-          Dashboard
-        </div>
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-      </div>
-      <div className="absolute top-[984px] left-[0px] rounded-md bg-primary w-[297px] h-[74px] overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-          Users
-        </div>
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-      </div>
-      <div className="absolute top-[1072px] left-[0px] rounded-lg bg-white w-[7px] h-[73px]" />
-      <div className="absolute top-[840px] left-[304px] rounded-md bg-lightslategray w-[120px] h-12 overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-          Mahasiswa
-        </div>
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-      </div>
-      <div className="absolute top-[925px] left-[304px] tracking-[-0.02em] leading-[22px] font-semibold text-primary flex items-center w-[108px] h-[29px]">
-        Mahasiswa
-      </div>
-      <img
-        className="absolute top-[883px] left-[319px] rounded-lg w-[84px] h-1.5"
-        alt=""
-        src="/rectangle-13.svg"
-      />
-      <img
-        className="absolute top-[1037px] left-[817px] w-[260px] h-[257px]"
-        alt=""
-        src="/rectangle-18.svg"
-      />
-      <div className="absolute top-[1158px] left-[853px] rounded-md bg-primary w-[191px] h-12 overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-          MENUNGGU SEMINAR
-        </div>
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-      </div>
-      <div className="absolute top-[1206px] left-[853px] rounded-md bg-primary w-[191px] h-12 overflow-hidden flex flex-row items-center justify-start py-3 px-4 box-border gap-[10px]">
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-        <div className="relative tracking-[-0.02em] leading-[22px] font-semibold">
-          LULUS
-        </div>
-        <img
-          className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
-          alt=""
-          src="/pluscircle1.svg"
-        />
-      </div>
-    </div>
+      {isPOPUPPKLOpen && (
+        <PortalPopup
+          overlayColor="rgba(113, 113, 113, 0.3)"
+          placement="Centered"
+          onOutsideClick={closePOPUPPKL}
+        >
+          <POPUPPKL onClose={closePOPUPPKL} />
+        </PortalPopup>
+      )}
+      {isPOPUPPKL1Open && (
+        <PortalPopup
+          overlayColor="rgba(113, 113, 113, 0.3)"
+          placement="Centered"
+          onOutsideClick={closePOPUPPKL1}
+        >
+          <POPUPPKL onClose={closePOPUPPKL1} />
+        </PortalPopup>
+      )}
+      {isPOPUPPKL2Open && (
+        <PortalPopup
+          overlayColor="rgba(113, 113, 113, 0.3)"
+          placement="Centered"
+          onOutsideClick={closePOPUPPKL2}
+        >
+          <POPUPPKL onClose={closePOPUPPKL2} />
+        </PortalPopup>
+      )}
+      {isPOPUPPKL3Open && (
+        <PortalPopup
+          overlayColor="rgba(113, 113, 113, 0.3)"
+          placement="Centered"
+          onOutsideClick={closePOPUPPKL3}
+        >
+          <POPUPPKL onClose={closePOPUPPKL3} />
+        </PortalPopup>
+      )}
+      {isPOPUPPKL4Open && (
+        <PortalPopup
+          overlayColor="rgba(113, 113, 113, 0.3)"
+          placement="Centered"
+          onOutsideClick={closePOPUPPKL4}
+        >
+          <POPUPPKL onClose={closePOPUPPKL4} />
+        </PortalPopup>
+      )}
+      {isPOPUPPKL5Open && (
+        <PortalPopup
+          overlayColor="rgba(113, 113, 113, 0.3)"
+          placement="Centered"
+          onOutsideClick={closePOPUPPKL5}
+        >
+          <POPUPPKL onClose={closePOPUPPKL5} />
+        </PortalPopup>
+      )}
+      {isPOPUPPKL6Open && (
+        <PortalPopup
+          overlayColor="rgba(113, 113, 113, 0.3)"
+          placement="Centered"
+          onOutsideClick={closePOPUPPKL6}
+        >
+          <POPUPPKL onClose={closePOPUPPKL6} />
+        </PortalPopup>
+      )}
+    </>
   );
 };
 

@@ -1,0 +1,172 @@
+.loginChild {
+  position: absolute;
+  top: 64px;
+  left: 4px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  width: 1055px;
+  height: 605px;
+}
+.browserHeaderChild {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 64px;
+  height: 16px;
+}
+.browserHeaderItem {
+  position: absolute;
+  width: calc(100% + 2px);
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-top: 2px solid #545f71;
+  box-sizing: border-box;
+  height: 2px;
+}
+.websitenamecom,
+.websitenamecomWrapper {
+  position: absolute;
+  width: 466px;
+  height: 36px;
+}
+.websitenamecom {
+  top: 0;
+  left: calc(50% - 233px);
+  letter-spacing: -0.02em;
+  line-height: 22px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.websitenamecomWrapper {
+  top: 14px;
+  left: calc(50% - 232.5px);
+  border-radius: 10px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.browserHeader,
+.webFrameDetachAfterPlaci {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.browserHeader {
+  width: 100%;
+  right: 0;
+  background-color: #eef1f4;
+  height: 64px;
+}
+.webFrameDetachAfterPlaci {
+  border-radius: 16px;
+  border: 4px solid #545f71;
+  box-sizing: border-box;
+  width: 1059px;
+  height: 669px;
+  text-align: center;
+  font-size: 18px;
+}
+.label {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 19px;
+}
+.textInputIcon {
+  align-self: stretch;
+  position: relative;
+  border-radius: 6px;
+  max-width: 100%;
+  overflow: hidden;
+  height: 48px;
+  flex-shrink: 0;
+}
+.textInputField {
+  position: absolute;
+  top: 278px;
+  left: 365px;
+  width: 345px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 7px;
+}
+.label1 {
+  position: absolute;
+  top: 134px;
+  left: 451px;
+  letter-spacing: -0.02em;
+  line-height: 19px;
+  font-weight: 600;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 172px;
+}
+.textInputField1 {
+  position: absolute;
+  top: 366px;
+  left: 365px;
+  width: 345px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 7px;
+}
+.plusCircleIcon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: none;
+}
+.buttonLabel {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 22px;
+  font-weight: 600;
+}
+.button,
+.image02Icon {
+  position: absolute;
+  overflow: hidden;
+}
+.button {
+  top: 454px;
+  left: 456px;
+  border-radius: 6px;
+  background-color: #545f71;
+  width: 149px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+}
+.image02Icon {
+  top: 159px;
+  left: 496px;
+  width: 83px;
+  height: 77px;
+}
+.login {
+  position: relative;
+  width: 100%;
+  height: 669px;
+  text-align: left;
+  font-size: 14px;
+  color: #545f71;
+  font-family: Inter;
+}
